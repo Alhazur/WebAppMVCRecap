@@ -1,0 +1,23 @@
+﻿@model List<Car>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Car´s Index</h1>
+
+<a asp-controller="Cars" asp-action="Create">Create</a>
+
+<div class="col-12">
+    <div class="row">
+        <div class="col-2">Id</div>
+        <div class="col-3">Brand</div>
+        <div class="col-3">Name</div>
+        <div class="col-4">Options</div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <partial name="_CarRow" model="item" />
+    }
+</div>
+
+

@@ -1,0 +1,13 @@
+﻿@model Car
+
+<div class="row" id="@("car" + Model.Id)">
+    <div class="col-2">@Model.Id</div>
+    <div class="col-3">@Model.Brand</div>
+    <div class="col-3">@Model.Name</div>
+    <div class="col-4">
+        <button class="btn btn-danger"
+                onclick="DeleteListItem('@("car" + Model.Id)','@Url.Action("Delete","Cars",new { id = Model.Id})')">
+            Delete
+        </button>
+    </div>
+</div>
